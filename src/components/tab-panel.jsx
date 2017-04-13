@@ -9,7 +9,7 @@ import {selectTab, removeTab} from "atp-ui";
 
 export default props =>
     <Tabs
-        activeKey={Object.keys(o(props.tabPanel).filter(tab => tab.active))[0]}
+        activeKey={Object.keys(o(props.tabPanel).filter(tab => tab.active).raw)[0]}
         onSelect={key => props.dispatch(selectTab(key))}
         id="tabPanel"
     >
