@@ -4,16 +4,16 @@
 
 import React from "react";
 import {Tabs, Tab, Col} from "react-bootstrap";
-
+import {o} from "atp-sugar";
 import {selectTab, removeTab} from "atp-ui";
 
 export default props =>
     <Tabs
-        activeKey={Object.keys(props.tabPanel.$filter(tab => tab.active))[0]}
+        activeKey={Object.keys(o(props.tabPanel).filter(tab => tab.active))[0]}
         onSelect={key => props.dispatch(selectTab(key))}
         id="tabPanel"
     >
-        {props.tabPanel.$map((tab, key) =>
+        {o(props.tabPanel).map((tab, key) =>
             <Tab
                 key={key}
                 eventKey={key}
@@ -28,5 +28,5 @@ export default props =>
                     {tab.controller()}
                 </Col>
             </Tab>
-        ).$values()}
+        ).values()}
     </Tabs>;

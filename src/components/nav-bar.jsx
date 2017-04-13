@@ -4,17 +4,18 @@
 
 import React from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from "react-bootstrap";
+import {o} from "atp-sugar";
 
 const bySortOrder = ((a, b) => a.sortOrder - b.sortOrder);
 
 const navMenu = props =>
-    props.menu.$values()
-        .filter(item => !item.permissions || item.permissions.$intersect(props.permissions).length > 0)
+    o(props.menu).values()
+        .filter(item => !item.permissions || o(item.permissions).intersect(props.permissions).length > 0)
         .sort(bySortOrder)
         .map((item, i) => item.children
             ? <NavDropdown key={i} eventKey={i} title={item.label} id={i}>
-                {item.children.$as(subMenu => subMenu.$values()
-                    .filter(item => !item.permissions || item.permissions.$intersect(props.permissions).length > 0)
+                {o(item.children).as(subMenu => o(subMenu).values()
+                    .filter(item => !item.permissions || o(item.permissions).intersect(props.permissions).length > 0)
                     .sort(bySortOrder)
                     .map((subItem, i2) =>
                         <MenuItem key={i2} eventKey={i + i2/10} onSelect={() => subItem.onClick(props.dispatch)}>
