@@ -5,6 +5,8 @@
 import ui from "./reducer";
 import Navbar from "./containers/Navbar";
 import TabPanel from "./containers/TabPanel";
+import Assigner from "./components/Assigner";
+
 import {addTab, removeTab, selectTab} from "./reducer/tab-panel";
 
 export default {
@@ -13,4 +15,4 @@ export default {
     }
 };
 
-export {Navbar, TabPanel, addTab, removeTab, selectTab};
+export {Assigner, Navbar, TabPanel, addTab, removeTab, selectTab};
