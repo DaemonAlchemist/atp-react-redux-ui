@@ -11,7 +11,7 @@ const Assigner = props =>
         <Col xs={5}>
             <label>Available</label>
             <select multiple className="form-control" style={{minHeight: "300px"}}>
-                {a(props.available.filter(a => props.assigned.filter(b => b.id === a.id).length === 0))
+                {a(props.available.filter(a => props.assigned.filter(b => b.id == a.id).length === 0))
                     .sortBy("name")
                     .map((item, i) =>
                         <option key={i} onClick={() => props.onAssign(item)}>{item.name}</option>
@@ -25,7 +25,7 @@ const Assigner = props =>
         <Col xs={5}>
             <label>Assigned</label>
             <select multiple className="form-control" style={{minHeight: "300px"}}>
-                {a(props.available.filter(a => props.assigned.filter(b => b.id === a.id).length !== 0))
+                {a(props.available.filter(a => props.assigned.filter(b => b.id == a.id).length !== 0))
                     .sortBy("name")
                     .map((item, i) =>
                         <option key={i} onClick={() => props.onUnassign(item)}>{item.name}</option>
