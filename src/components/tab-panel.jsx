@@ -5,7 +5,7 @@
 import React from "react";
 import {Tabs, Tab, Col} from "react-bootstrap";
 import {o} from "atp-sugar";
-import {selectTab, removeTab} from "atp-ui";
+import {selectTab, removeTab} from "../reducer/tab-panel";
 
 export default props =>
     <Tabs
