@@ -7,7 +7,7 @@ import Navbar from "./containers/Navbar";
 import TabPanel from "./containers/TabPanel";
 import FileInput from "./containers/FileInput";
 import {encodeFile} from "./containers/FileInput";
-import Assigner from "./components/Assigner";
+import Assigner from "./containers/Assigner";
 import Breadcrumb from "./components/Breadcrumb";
 
 import {addTab, removeTab, selectTab} from "./reducer/tab-panel";
