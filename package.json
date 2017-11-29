@@ -34,16 +34,17 @@
     "babel-preset-stage-2": "^6.24.1",
     "chai": "^4.1.2",
     "dependency-check": "^2.9.1",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "npm-check-updates": "^2.13.0"
   },
   "dependencies": {
-    "atp-pointfree": "^0.3.2",
-    "atp-sugar": "^0.8.1",
-    "react": "^16.0.0",
+    "atp-pointfree": "^0.3.3",
+    "atp-sugar": "^0.8.3",
+    "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-form": "^7.1.2"
+    "redux-form": "^7.2.0"
   }
 }
