@@ -7,5 +7,12 @@ export default connect(
         rightMenu: state.ui.menus[props.rightMenu],
         permissions: state.uac.profile.permissions
     }),
-    dispatch => ({dispatch})
+    (dispatch, props) => ({
+        dispatch,
+        onClick: item => () => {
+            if(typeof item.onClick !== 'undefined') {
+                item.onClick(dispatch);
+            }
+        }
+    })
 )(Navbar);
