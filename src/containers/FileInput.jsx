@@ -8,13 +8,14 @@ export const encodeFile = file => new Promise((resolve, reject) => {
     const reader  = new FileReader();
 
     reader.addEventListener("load", () => resolve(
-        o(/^data:(.*);base64,(.*)$/.exec(reader.result)).as(match => ({
-            name: file.name,
+        o(/^(.*)\.(.*)$/.exec(file.name)).as(fileParts =>
+        o(/^data:(.*);base64,(.*)$/.exec(reader.result)).as(dataParts => ({
+            fileName: fileParts[1],
+            fileExtension: fileParts[2],
             size: file.size,
-            type: file.type,
-            mime: match[1],
-            data: match[2]
-        })))
+            mime: file.type,
+            data: dataParts[2]
+        }))))
         , false);
 
     reader.readAsDataURL(file);
