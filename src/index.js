@@ -9,7 +9,6 @@ import FileInput from "./containers/FileInput";
 import {encodeFile} from "./containers/FileInput";
 import Assigner from "./containers/Assigner";
 import Breadcrumb from "./components/Breadcrumb";
-import Toggle from "./components/toggle";
 
 import {addTab, removeTab, selectTab} from "./reducer/tab-panel";
 
@@ -19,4 +18,4 @@ export default {
     }
 };
 
-export {Assigner, Breadcrumb, Navbar, TabPanel, FileInput, addTab, removeTab, selectTab, encodeFile, Toggle};
+export {Assigner, Breadcrumb, Navbar, TabPanel, FileInput, addTab, removeTab, selectTab, encodeFile};
