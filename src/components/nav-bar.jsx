@@ -18,9 +18,12 @@ const navMenu = ({menu, permissions, onClick}) =>
                     .filter(item => !item.permissions || a(item.permissions).intersect(permissions).length > 0)
                     .sort(bySortOrder)
                     .map((subItem, i2) =>
-                        <MenuItem key={i2} eventKey={i + i2/10} onSelect={onClick(subItem)}>
-                            {subItem.label}
-                        </MenuItem>
+                        subItem.noAnchor
+                            ? <div key={i2} style={{marginLeft: "15px"}}>{subItem.label}</div>
+                            : <MenuItem key={i2} eventKey={i + i2/10} onSelect={onClick(subItem)}>
+                                {subItem.label}
+                              </MenuItem>
+
                     )
                 )}
             </NavDropdown>
