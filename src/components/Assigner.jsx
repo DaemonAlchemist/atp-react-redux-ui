@@ -6,7 +6,12 @@ import React from "react";
 import {Field} from 'redux-form';
 import {Col, Row, InputGroup, Button, Panel} from "react-bootstrap";
 
-export default ({icon, label, available, assigned, onAssign, onUnassign}) =>
+export default ({
+    icon, label, availableLabel, assignedLabel,
+    available, assigned,
+    onAssign, onUnassign,
+    minHeight
+}) =>
     <Panel header={
         <div>
             <i className={icon}/> {label}
@@ -22,16 +27,16 @@ export default ({icon, label, available, assigned, onAssign, onUnassign}) =>
     }>
         <Row>
             <Col xs={6}>
-                <label>Available {label}</label>
-                <select multiple className="form-control" style={{minHeight: "300px"}}>
+                <label>{availableLabel || `Available ${label}`}</label>
+                <select multiple className="form-control" style={{minHeight: minHeight || "300px"}}>
                     {available.map((item, i) =>
                         <option key={i} onClick={() => onAssign(item)}>{item.name}</option>
                     )}
                 </select>
             </Col>
             <Col xs={6}>
-                <label>Assigned {label}</label>
-                <select multiple className="form-control" style={{minHeight: "300px"}}>
+                <label>{assignedLabel || `Assigned ${label}`}</label>
+                <select multiple className="form-control" style={{minHeight: minHeight || "300px"}}>
                     {assigned.map((item, i) =>
                         <option key={i} onClick={() => onUnassign(item)}>{item.name}</option>
                     )}
