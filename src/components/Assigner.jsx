@@ -1,24 +1,22 @@
-/**
- * Created by Andy on 4/13/2017.
- */
 
 import React from "react";
 import {Field} from 'redux-form';
-import {Col, Row, InputGroup, Button, Panel} from "react-bootstrap";
+import {Col, Row, InputGroup, Panel} from "react-bootstrap";
+import {Icon as FA} from 'react-font-awesome-5';
 
 export default ({
-    icon, label, availableLabel, assignedLabel,
+    Icon, label, availableLabel, assignedLabel,
     available, assigned,
     onAssign, onUnassign,
     minHeight
 }) =>
     <Panel header={
         <div>
-            <i className={icon}/> {label}
+            <Icon /> {label}
             <div style={{float: "right", marginTop: "-2px"}}>
                 <InputGroup bsSize="small">
                     <InputGroup.Addon>
-                        <i className="fa fa-search" />
+                        <FA.Search />
                     </InputGroup.Addon>
                     <Field name="search" component="input" placeholder="Search" className="form-control" />
                 </InputGroup>

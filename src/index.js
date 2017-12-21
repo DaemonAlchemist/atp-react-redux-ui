@@ -1,6 +1,3 @@
-/**
- * Created by Andy on 3/21/2017.
- */
 
 import ui from "./reducer";
 import Navbar from "./containers/Navbar";

@@ -1,6 +1,3 @@
-/**
- * Created by Andy on 3/16/2017.
- */
 
 import React from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from "react-bootstrap";

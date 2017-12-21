@@ -1,6 +1,3 @@
-/**
- * Created by Andrea on 11/7/2017.
- */
 
 import {connect} from 'react-redux';
 import {reduxForm, getFormValues} from 'redux-form';

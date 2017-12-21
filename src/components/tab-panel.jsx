@@ -1,11 +1,9 @@
-/**
- * Created by Andy on 3/22/2017.
- */
 
 import React from "react";
 import {Tabs, Tab, Col} from "react-bootstrap";
 import {o} from "atp-sugar";
 import {selectTab, removeTab} from "../reducer/tab-panel";
+import {Icon} from 'react-font-awesome-5';
 
 export default props =>
     <Tabs
@@ -20,7 +18,9 @@ export default props =>
                 title={
                     <span>
                         {tab.title}&nbsp;&nbsp;
-                        <i className="fa fa-times" onClick={() => props.dispatch(removeTab(key))} />
+                        <span onClick={() => props.dispatch(removeTab(key))}>
+                            <Icon.Times />
+                        </span>
                     </span>
                 }
             >

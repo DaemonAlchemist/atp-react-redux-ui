@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {Icon} from 'react-font-awesome-5';
 
 export default ({ data }) =>
     <div className="ts breadcrumb">
@@ -10,6 +12,6 @@ export default ({ data }) =>
                     : val.text
                 }
             </a>,
-            !lastOne && <i className="right angle icon divider"></i>
+            !lastOne && <Icon.AngleRight />
         ]))}
     </div>;
