@@ -1,6 +1,6 @@
 {
   "name": "atp-ui",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "A user interface module",
   "main": "lib/index.js",
   "scripts": {
