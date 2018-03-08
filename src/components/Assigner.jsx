@@ -13,12 +13,12 @@ export default ({
     <Panel>
         <Panel.Heading>
             <Icon /> {label}
-            <div style={{float: "right", marginTop: "-2px"}}>
+            <div style={{float: "right", marginTop: "-3px", marginRight: "-2px"}}>
                 <InputGroup bsSize="small">
-                    <InputGroup.Addon>
+                    <InputGroup.Addon bsClass="" style={{position: "absolute", left: "4px", top: "3px", zIndex: 999, color: "#000"}}>
                         <FA.Search />
                     </InputGroup.Addon>
-                    <Field name="search" component="input" placeholder="Search" className="form-control" />
+                    <Field name="search" component="input" placeholder="Search" className="form-control" style={{paddingLeft: "18px"}}/>
                 </InputGroup>
             </div>
         </Panel.Heading>
