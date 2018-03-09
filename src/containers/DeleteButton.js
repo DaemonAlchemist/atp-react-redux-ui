@@ -11,7 +11,7 @@ export default connect(
         text: props.text || "",
         confirmText: props.confirmText || "Delete",
         cancelText: props.cancelText || "Cancel",
-        width: props.width || "150px"
+        width: props.width || "150px",
         size: props.size || "regular"
     }),
     (dispatch, props) => ({
