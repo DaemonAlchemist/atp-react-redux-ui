@@ -7,7 +7,7 @@ import {encodeFile} from "./containers/FileInput";
 import Assigner from "./containers/Assigner";
 import Breadcrumb from "./components/Breadcrumb";
 import {toggle} from './reducer/toggle';
-import DeleteButton from './components/delete-button';
+import DeleteButton from './containers/DeleteButton';
 
 import {addTab, removeTab, selectTab} from "./reducer/tab-panel";
 
