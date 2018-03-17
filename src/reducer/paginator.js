@@ -1,5 +1,5 @@
 
-import {o} from "atp-sugar";
+import {switchOn} from 'atp-pointfree';
 
 //Action type definitions
 export const SET_PAGE_COUNT = 'atp-ui/paginator/setCount';
@@ -17,12 +17,20 @@ const getPaginatorData = (state, name) => typeof state[name] !== 'undefined'
     : {page: 1, pages: 1};
 
 //Reducer
-export default (state = {}, action) => o(action.type).switch({
-    [SET_PAGE_COUNT]: () => o(state).merge({
-        [action.name]: o(getPaginatorData(state, action.name)).merge({pages: action.count}).raw
-    }).raw,
-    [SET_PAGE]: () => o(state).merge({
-        [action.name]: o(getPaginatorData(state, action.name)).merge({page: action.page}).raw
-    }).raw,
+export default (state = {}, action) => switchOn(action.type, {
+    [SET_PAGE_COUNT]: () => ({
+        ...state,
+        [action.name]: {
+            ...getPaginatorData(state, action.name),
+            pages: action.count
+        }
+    }),
+    [SET_PAGE]: () => ({
+        ...state,
+        [action.name]: {
+            ...getPaginatorData(state, action.name),
+            page: action.page
+        }
+    }),
     default: () => state,
 });

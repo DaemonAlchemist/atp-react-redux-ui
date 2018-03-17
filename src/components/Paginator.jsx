@@ -28,8 +28,6 @@ const linksToShow = (page, totalPages, innerLinks, outerLinks) => {
             ) :
                 middle
         );
-    console.log("links for page " + page);
-    console.log(links);
     return links;
 }
 
