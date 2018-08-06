@@ -38,9 +38,9 @@
     "npm-check-updates": "^2.14.2"
   },
   "dependencies": {
-    "atp-pointfree": "^0.10.1",
+    "atp-pointfree": "^0.11.0",
     "atp-sugar": "^0.8.4",
-    "react": "^16.4.1",
+    "react": "^16.4.2",
     "react-bootstrap": "^0.32.1",
     "react-font-awesome-5": "^0.2.2",
     "react-redux": "^5.0.7",
