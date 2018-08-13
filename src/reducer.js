@@ -5,6 +5,8 @@ import tabPanel from "./reducer/tab-panel";
 import menus from "./reducer/menus";
 import toggle from "./reducer/toggle";
 import radio from "./reducer/radio";
+import input from "./reducer/input";
+
 import paginator from "./reducer/paginator";
 
 export default combineReducers({
@@ -12,5 +14,6 @@ export default combineReducers({
     menus,
     paginator,
     toggle,
-    radio
+    radio,
+    input
 });
