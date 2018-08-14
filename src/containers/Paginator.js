@@ -1,7 +1,7 @@
 
 import {connect} from 'react-redux';
 import Paginator from "../components/Paginator";
-import {paginator} from "../reducer/paginator";
+import {paginator} from "basic-reducers";
 import {get} from 'atp-pointfree';
 
 export default connect(

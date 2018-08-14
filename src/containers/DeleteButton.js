@@ -1,7 +1,7 @@
 
 import DeleteButton from "../components/delete-button";
 import {connect} from "react-redux";
-import {toggle} from "../reducer/toggle";
+import {toggle} from "basic-reducers";
 import {get} from 'atp-pointfree';
 
 export default connect(
