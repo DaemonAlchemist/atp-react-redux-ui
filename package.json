@@ -38,11 +38,11 @@
     "npm-check-updates": "^2.14.2"
   },
   "dependencies": {
-    "atp-pointfree": "^0.11.1",
-    "atp-sugar": "^0.8.4",
-    "basic-reducers": "^0.1.0",
+    "atp-pointfree": "^0.11.5",
+    "atp-sugar": "^0.9.1",
+    "basic-reducers": "^0.2.1",
     "react": "^16.4.2",
-    "react-bootstrap": "^0.32.1",
+    "react-bootstrap": "^0.32.3",
     "react-font-awesome-5": "^0.2.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
