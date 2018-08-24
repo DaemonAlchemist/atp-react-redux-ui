@@ -8,6 +8,7 @@ import Assigner from "./containers/Assigner";
 import Breadcrumb from "./components/Breadcrumb";
 import DeleteButton from './containers/DeleteButton';
 import Paginator from "./containers/Paginator";
+import Markdown from "./components/Markdown";
 
 import {addTab, removeTab, selectTab} from "./reducer/tab-panel";
 
@@ -18,6 +19,6 @@ export default {
 };
 
 export {
-    Assigner, Breadcrumb, DeleteButton, Navbar, TabPanel, FileInput, Paginator,
+    Assigner, Breadcrumb, DeleteButton, Markdown, Navbar, TabPanel, FileInput, Paginator,
     addTab, removeTab, selectTab, encodeFile
 };
