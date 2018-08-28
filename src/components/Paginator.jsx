@@ -41,6 +41,7 @@ export default ({page, totalPages, pagesToShow, size="lg", style="link", btnWidt
         </Button>
         {linksToShow(page, totalPages, pagesToShow.inner, pagesToShow.outer).map(curPage =>
             <Button
+                key={curPage}
                 bsSize={size}
                 bsStyle={style}
                 onClick={onClick(curPage)}
