@@ -5,7 +5,7 @@ import {Icon} from 'react-font-awesome-5';
 
 export default ({onClick, text, message, id, isPanelVisible, showPanel, hidePanel, performAction, confirmText, cancelText, width, size}) =>
     <span style={{position: "relative"}}>
-        <Button bsStyle="link" bsSize={size} onClick={showPanel}>
+        <Button bsStyle="link" bsSize={size || null} onClick={showPanel}>
             <span className="text-danger"><Icon.Trash /> {text}</span>
         </Button>
         {isPanelVisible &&

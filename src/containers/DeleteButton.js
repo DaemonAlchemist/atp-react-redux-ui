@@ -12,7 +12,7 @@ export default connect(
         confirmText: props.confirmText || "Delete",
         cancelText: props.cancelText || "Cancel",
         width: props.width || "150px",
-        size: props.size || "regular"
+        size: props.size || ""
     }),
     (dispatch, props) => ({
         showPanel: () => dispatch(toggle.show(props.id)),
